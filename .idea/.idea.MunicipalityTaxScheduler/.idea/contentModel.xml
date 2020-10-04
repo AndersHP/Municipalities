@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Repos\MunicipalityTaxScheduler" t="IncludeFlat">
+      <e p="Core" t="Include">
+        <e p="Core.DataAccessContracts" t="IncludeRecursive">
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="Core.DataAccessContracts.csproj" t="IncludeRecursive" />
+          <e p="IMunicipalityRepository.cs" t="Include" />
+          <e p="IRepository.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.1" t="Include">
+                <e p="Core.DataAccessContracts.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Core.Domain" t="IncludeRecursive">
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="Core.Domain.csproj" t="IncludeRecursive" />
+          <e p="Municipality.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.1" t="Include">
+                <e p="Core.Domain.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="TaxPeriod.cs" t="Include" />
+        </e>
+        <e p="Core.Usecases" t="IncludeRecursive">
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="Core.Usecases.csproj" t="IncludeRecursive" />
+          <e p="IMunicipalityFileHandler.cs" t="Include" />
+          <e p="IMunicipalityHandler.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp3.1" t="Include">
+                <e p="Core.Usecases.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="DAL" t="Include">
+        <e p="DAL.InMemoryRepositories" t="IncludeRecursive">
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="DAL.InMemoryRepositories.csproj" t="IncludeRecursive" />
+          <e p="InMemoryMunicipalityRepository.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp3.1" t="Include">
+                <e p="DAL.InMemoryRepositories.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="MunicipalityTaxConsole" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MunicipalityTaxConsole.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="MunicipalityTaxConsole.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="MunicipalityTaxScheduler.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\Anders Poulsen\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Anders Poulsen\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_MunicipalityTaxScheduler.516517494.00" t="ExcludeRecursive" />
+  </component>
+</project>
