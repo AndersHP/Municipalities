@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MunicipalityTaxConsole", "MunicipalityTaxConsole\MunicipalityTaxConsole.csproj", "{E56C1B34-DB35-4D07-A914-3495A25362E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{AF231286-E9FF-4C18-9EC1-1EE93679FBBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Domain", "Core\Core.Domain\Core.Domain.csproj", "{0B92414D-1319-4236-9F71-7AA6EA19AAF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Usecases", "Core\Core.Usecases\Core.Usecases.csproj", "{93407885-1A2B-4DF1-98D5-0C106A3617DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{67C35D4D-3F60-42B7-A2CA-DF3FD07A8E62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.InMemoryRepositories", "DAL\DAL.InMemoryRepositories\DAL.InMemoryRepositories.csproj", "{4D059C2F-71E8-4B55-B219-DD547B306DF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DataAccessContracts", "Core\Core.DataAccessContracts\Core.DataAccessContracts.csproj", "{926810EE-CCA2-4923-8877-9C4C3DF28B4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E56C1B34-DB35-4D07-A914-3495A25362E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56C1B34-DB35-4D07-A914-3495A25362E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56C1B34-DB35-4D07-A914-3495A25362E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56C1B34-DB35-4D07-A914-3495A25362E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B92414D-1319-4236-9F71-7AA6EA19AAF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B92414D-1319-4236-9F71-7AA6EA19AAF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B92414D-1319-4236-9F71-7AA6EA19AAF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B92414D-1319-4236-9F71-7AA6EA19AAF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93407885-1A2B-4DF1-98D5-0C106A3617DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93407885-1A2B-4DF1-98D5-0C106A3617DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93407885-1A2B-4DF1-98D5-0C106A3617DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93407885-1A2B-4DF1-98D5-0C106A3617DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D059C2F-71E8-4B55-B219-DD547B306DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D059C2F-71E8-4B55-B219-DD547B306DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D059C2F-71E8-4B55-B219-DD547B306DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D059C2F-71E8-4B55-B219-DD547B306DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{926810EE-CCA2-4923-8877-9C4C3DF28B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{926810EE-CCA2-4923-8877-9C4C3DF28B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{926810EE-CCA2-4923-8877-9C4C3DF28B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{926810EE-CCA2-4923-8877-9C4C3DF28B4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0B92414D-1319-4236-9F71-7AA6EA19AAF4} = {AF231286-E9FF-4C18-9EC1-1EE93679FBBC}
+		{93407885-1A2B-4DF1-98D5-0C106A3617DD} = {AF231286-E9FF-4C18-9EC1-1EE93679FBBC}
+		{4D059C2F-71E8-4B55-B219-DD547B306DF3} = {67C35D4D-3F60-42B7-A2CA-DF3FD07A8E62}
+		{926810EE-CCA2-4923-8877-9C4C3DF28B4D} = {AF231286-E9FF-4C18-9EC1-1EE93679FBBC}
+	EndGlobalSection
+EndGlobal
