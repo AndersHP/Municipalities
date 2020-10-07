@@ -18,7 +18,8 @@ namespace Core.Usecases.Tests
         {
             //Arrange
             var repo = new FakeRepository();
-            var handler = new MunicipalityHandler(repo);
+            var factory = new StubTaxPeriodFactory();
+            var handler = new MunicipalityHandler(repo, factory);
             var date = DateTime.Parse(datestring);
             
             //Act

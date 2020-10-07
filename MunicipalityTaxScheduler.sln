@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DataAccessContracts", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Usecases.Tests", "Core\Core.Usecases.Tests\Core.Usecases.Tests.csproj", "{23714322-9EA2-4B6A-8BE6-A1385A35562F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.InMemoryMunicipalityRepositories.Tests", "DAL\DAL.InMemoryMunicipalityRepositories.Tests\DAL.InMemoryMunicipalityRepositories.Tests.csproj", "{BBDA7F26-F807-4EB7-B4EE-508148C9FF71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{23714322-9EA2-4B6A-8BE6-A1385A35562F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23714322-9EA2-4B6A-8BE6-A1385A35562F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23714322-9EA2-4B6A-8BE6-A1385A35562F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBDA7F26-F807-4EB7-B4EE-508148C9FF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBDA7F26-F807-4EB7-B4EE-508148C9FF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBDA7F26-F807-4EB7-B4EE-508148C9FF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBDA7F26-F807-4EB7-B4EE-508148C9FF71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0B92414D-1319-4236-9F71-7AA6EA19AAF4} = {AF231286-E9FF-4C18-9EC1-1EE93679FBBC}
@@ -53,5 +59,6 @@ Global
 		{4D059C2F-71E8-4B55-B219-DD547B306DF3} = {67C35D4D-3F60-42B7-A2CA-DF3FD07A8E62}
 		{926810EE-CCA2-4923-8877-9C4C3DF28B4D} = {AF231286-E9FF-4C18-9EC1-1EE93679FBBC}
 		{23714322-9EA2-4B6A-8BE6-A1385A35562F} = {AF231286-E9FF-4C18-9EC1-1EE93679FBBC}
+		{BBDA7F26-F807-4EB7-B4EE-508148C9FF71} = {67C35D4D-3F60-42B7-A2CA-DF3FD07A8E62}
 	EndGlobalSection
 EndGlobal

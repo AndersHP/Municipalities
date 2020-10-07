@@ -10,10 +10,12 @@ namespace Core.Usecases
     public class MunicipalityHandler : IMunicipalityHandler
     {
         private readonly IMunicipalityRepository _municipalityRepository;
+        private readonly ITaxPeriodFactory _taxPeriodFactory;
 
-        public MunicipalityHandler(IMunicipalityRepository municipalityRepository)
+        public MunicipalityHandler(IMunicipalityRepository municipalityRepository, ITaxPeriodFactory taxPeriodFactory)
         {
             _municipalityRepository = municipalityRepository;
+            _taxPeriodFactory = taxPeriodFactory;
         }
         
         public async Task<TaxPeriod> GetTaxInMunicipalityForGivenDate(string municipalityName, DateTime date)
@@ -43,9 +45,11 @@ namespace Core.Usecases
             }
         }
 
-        public void AddScheduledTax(DateTime start, TaxTypes type, int taxPercentage)
+        public void AddScheduledTax(Municipality municipality, DateTime start, TaxTypes type, int taxPercentage)
         {
-            throw new NotImplementedException();
+            var taxPeriod = _taxPeriodFactory.CreateTaxPeriod(start, type, taxPercentage);
+            municipality.AddTaxPeriod(taxPeriod);
+            _municipalityRepository.Update(municipality, new CancellationToken());
         }
     }
 }

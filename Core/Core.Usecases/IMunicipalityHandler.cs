@@ -8,6 +8,6 @@ namespace Core.Usecases
     {
         Task<TaxPeriod> GetTaxInMunicipalityForGivenDate(string municipalityName, DateTime date);
         Task<Municipality> GetMunicipality(string name);
-        void AddScheduledTax(DateTime start, TaxTypes type, int taxPercentage);
+        void AddScheduledTax(Municipality municipality, DateTime start, TaxTypes type, int taxPercentage);
     }
 }

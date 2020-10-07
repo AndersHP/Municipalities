@@ -3,7 +3,7 @@ using Core.Domain;
 
 namespace Core.Usecases
 {
-    public class TaxPeriodFactory
+    public class TaxPeriodFactory : ITaxPeriodFactory
     {
         public TaxPeriod CreateTaxPeriod(DateTime start, TaxTypes type, int taxPercentage)
         {
