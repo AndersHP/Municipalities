@@ -21,32 +21,38 @@ namespace Core.Usecases.Tests
             res.End.ShouldBe(start);
         }
         
-        [Fact]
-        public void Weekly_Should_Start_On_A_Monday()
+        [Theory]
+        [InlineData("2020/01/06", "2020/01/06")] //Monday
+        [InlineData("2020/01/10", "2020/01/06")] //Friday
+        [InlineData("2020/01/12", "2020/01/13")] //Sunday
+        public void Weekly_Should_Start_On_A_Monday(string start, string expectedEnd)
         {
             //Arrange
             var factory = new TaxPeriodFactory();
-            var start = new DateTime(2020, 1, 2);
-            
+            var startDate = DateTime.Parse(start);
+
             //Act
-            var res = factory.CreateTaxPeriod(start, TaxTypes.Weekly, 1);
+            var res = factory.CreateTaxPeriod(startDate, TaxTypes.Weekly, 1);
 
             //Assert
-            res.Start.ShouldBe(new DateTime(2019, 12, 30));
+            res.Start.ShouldBe(DateTime.Parse(expectedEnd));
         }
         
-        [Fact]
-        public void Weekly_Should_End_On_A_Sunday()
+        [Theory]
+        [InlineData("2020/01/06", "2020/01/12")] //Monday
+        [InlineData("2020/01/10", "2020/01/12")] //Friday
+        [InlineData("2020/01/12", "2020/01/19")] //Sunday
+        public void Weekly_Should_End_On_A_Sunday(string start, string expectedEnd)
         {
             //Arrange
             var factory = new TaxPeriodFactory();
-            var start = new DateTime(2020, 1, 2);
+            var startDate = DateTime.Parse(start);
             
             //Act
-            var res = factory.CreateTaxPeriod(start, TaxTypes.Weekly, 1);
+            var res = factory.CreateTaxPeriod(startDate, TaxTypes.Weekly, 1);
 
             //Assert
-            res.End.ShouldBe(new DateTime(2020, 1, 5));
+            res.End.ShouldBe(DateTime.Parse(expectedEnd));
         }
         
         [Fact]

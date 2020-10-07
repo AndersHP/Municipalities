@@ -22,10 +22,14 @@ namespace Core.Usecases
         private static TaxPeriod CreateDailyPeriod(DateTime start, int taxPercentage) 
             => new TaxPeriod(taxPercentage, start, start);
 
+        //TODO: could make the starting day of the week a preference as it varies from country to country
         private static TaxPeriod CreateWeeklyPeriod(DateTime start, int taxPercentage)
         {
+            var dayOfWeek = start.DayOfWeek;
+            var lastDayOfWeek = start.AddDays((int) (7 - dayOfWeek));
+            var firstDayOfWeek = lastDayOfWeek.Subtract(new TimeSpan(6, 0, 0, 0));
             
-            return new TaxPeriod(taxPercentage, start, start.AddDays(7));
+            return new TaxPeriod(taxPercentage, firstDayOfWeek, lastDayOfWeek);
         }
 
         private static TaxPeriod CreateYearlyPeriod(DateTime start, int taxPercentage)
