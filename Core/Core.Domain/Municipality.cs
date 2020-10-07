@@ -18,5 +18,7 @@ namespace Core.Domain
 
         public IEnumerable<TaxPeriod> GetScheduledTaxPeriods() 
             => _scheduledTaxPeriods;
+
+        public string GetName() => _name;
     }
 }

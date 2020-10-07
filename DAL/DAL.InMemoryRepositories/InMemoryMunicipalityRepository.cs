@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,14 +11,20 @@ namespace DAL.InMemoryRepositories
 {
     public class InMemoryMunicipalityRepository : IMunicipalityRepository
     {
-        public Task<IEnumerable<Municipality>> Get(CancellationToken cancellationToken)
+        private List<Municipality> _municipalities;
+
+        public InMemoryMunicipalityRepository(List<Municipality> municipalities)
         {
-            throw new NotImplementedException();
+            _municipalities = municipalities;
         }
+
+        public Task<IEnumerable<Municipality>> Get(CancellationToken cancellationToken) 
+            => Task.FromResult<IEnumerable<Municipality>>(_municipalities);
 
         public Task<IEnumerable<Municipality>> Get(Expression<Func<Municipality, bool>> filter, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var result = _municipalities.AsQueryable().Where(filter);
+            return Task.FromResult<IEnumerable<Municipality>>(result);
         }
 
         public Task<Municipality> Get(int id, CancellationToken cancellationToken)
@@ -25,14 +32,21 @@ namespace DAL.InMemoryRepositories
             throw new NotImplementedException();
         }
 
-        public Task<int> Create(Municipality entity, CancellationToken cancellationToken)
+        //TODO: Consider doing something to use name as ID instead
+        public Task<int> Create(Municipality municipality, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            _municipalities.Add(municipality);
+            return Task.FromResult(1);
         }
 
-        public Task Update(Municipality entity, CancellationToken cancellationToken)
+        public Task Update(Municipality municipality, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var toUpdate = _municipalities
+                .FirstOrDefault(m => m.GetName() == municipality.GetName());
+            _municipalities.Remove(toUpdate);
+            _municipalities.Add(municipality);
+
+            return null;
         }
 
         public Task Update(Expression<Func<Municipality, bool>> filter, Municipality entity, CancellationToken cancellationToken)
