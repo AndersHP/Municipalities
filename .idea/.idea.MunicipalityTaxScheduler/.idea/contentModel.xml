@@ -28,6 +28,7 @@
             </e>
           </e>
           <e p="TaxPeriod.cs" t="Include" />
+          <e p="TaxTypes.cs" t="Include" />
         </e>
         <e p="Core.Usecases" t="IncludeRecursive">
           <e p="bin" t="ExcludeRecursive" />
@@ -42,6 +43,7 @@
               </e>
             </e>
           </e>
+          <e p="TaxPeriodFactory.cs" t="Include" />
         </e>
         <e p="Core.Usecases.Tests" t="IncludeRecursive">
           <e p="bin" t="ExcludeRecursive" />
@@ -56,6 +58,7 @@
               </e>
             </e>
           </e>
+          <e p="When_Creating_TaxPeriod.cs" t="Include" />
           <e p="When_Getting_Taxperiod.cs" t="Include" />
         </e>
       </e>

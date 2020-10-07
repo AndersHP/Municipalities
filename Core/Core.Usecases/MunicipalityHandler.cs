@@ -42,5 +42,10 @@ namespace Core.Usecases
                 throw new Exception("There should not be two municipalities with the same name");
             }
         }
+
+        public void AddScheduledTax(DateTime start, TaxTypes type, int taxPercentage)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
